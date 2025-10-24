@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreamento de Envios</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+        .lexend {
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="text-xs lexend bg-gray-100 min-h-screen flex items-center justify-center p-6">
+    <div class="bg-white shadow-md rounded-2xl p-6 w-full max-w-6xl">
+        <h1 class="text-2xl font-semibold text-gray-700 mb-6">RASTREAMENTO DE ENVIOS</h1>
+        <div class="grid grid-cols-6 gap-4 mb-8">
+            <div class="bg-[#4b0082] text-white rounded-xl p-4 flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-sm">
+                    <span>🏷️</span>
+                    <span>Etiquetas emitidas</span>
+                </div>
+                <p class="text-3xl font-semibold text-center mt-2">100</p>
+            </div>
+            <div class="bg-[#5b2ca2] text-white rounded-xl p-4 flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-sm">
+                    <span>📦</span>
+                    <span>Coletado</span>
+                </div>
+                <p class="text-3xl font-semibold text-center mt-2">5</p>
+            </div>
+            <div class="bg-[#b300b3] text-white rounded-xl p-4 flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-sm">
+                    <span>✈️</span>
+                    <span>Em Trânsito</span>
+                </div>
+                <p class="text-3xl font-semibold text-center mt-2">5</p>
+            </div>
+            <div class="bg-[#c46c6c] text-white rounded-xl p-4 flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-sm">
+                    <span>📦</span>
+                    <span>Liberado</span>
+                </div>
+                <p class="text-3xl font-semibold text-center mt-2">5</p>
+            </div>
+            <div class="bg-[#a4d65e] text-white rounded-xl p-4 flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-sm">
+                    <span>😊</span>
+                    <span>Entregue</span>
+                </div>
+                <p class="text-3xl font-semibold text-center mt-2">5</p>
+            </div>
+            <div class="bg-[#e53935] text-white rounded-xl p-4 flex flex-col justify-between">
+                <div class="flex items-center gap-2 text-sm">
+                    <span>⚠️</span>
+                    <span>Atenção</span>
+                </div>
+                <p class="text-3xl font-semibold text-center mt-2">12</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-5 gap-4 mb-6">
+            <input type="text" placeholder="Ref. Cliente/AWB"
+                class="col-span-1 border rounded-lg px-0.5 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
+            <input type="text" placeholder="Status"
+                class="col-span-1 border rounded-lg px-0.5 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
+            <input type="text" placeholder="Origem"
+                class="col-span-1 border rounded-lg px-0.5 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
+            <input type="text" placeholder="Destino"
+                class="col-span-1 border rounded-lg px-0.5 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
+            <input type="text" placeholder="Destinatário"
+                class="col-span-1 border rounded-lg px-0.5 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
+        </div>
+
+        <div class="overflow-x-auto">
+            <table class="min-w-full border-t-2 border-purple-700 text-sm text-left text-gray-700">
+                <thead>
+                    <tr class="border-b border-gray-200">
+                        <th class="px-1 py-2 font-medium">REF/AWB</th>
+                        <th class="px-1 py-2 font-medium">Status</th>
+                        <th class="px-1 py-2 font-medium">Origem (País)</th>
+                        <th class="px-1 py-2 font-medium">Destino (País)</th>
+                        <th class="px-1 py-2 font-medium">Remetente</th>
+                        <th class="px-1 py-2 font-medium">Destinatário</th>
+                        <th class="px-1 py-2 font-medium">Progresso</th>
+                        <th class="px-1 py-2 font-medium text-center">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="px-1 py-2">884917678708</td>
+                        <td class="px-1 py-2"><span class="bg-[#d2168d] text-white text-xs px-0.5 py-1 rounded-full">Em
+                                trânsito</span></td>
+                        <td class="px-1 py-2">NL</td>
+                        <td class="px-1 py-2">DE</td>
+                        <td class="px-1 py-2">Diego Silva</td>
+                        <td class="px-1 py-2">Alice Santos</td>
+                        <td class="px-1 py-2 flex gap-2 text-lg">🏷️ ✈️ 📦 ⚙️</td>
+                        <td class="px-1 py-2 text-center flex gap-3 justify-center text-lg">
+                            <span class="text-blue-600 cursor-pointer">🔗</span>
+                            <span class="text-green-500 cursor-pointer">🔄</span>
+                            <span class="text-orange-500 cursor-pointer">⚙️</span>
+                        </td>
+                    </tr>
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="px-1 py-2">884917678708</td>
+                        <td class="px-1 py-2"><span
+                                class="bg-[#5b2ca2] text-white text-xs px-0.5 py-1 rounded-full">Etiqueta emitida</span>
+                        </td>
+                        <td class="px-1 py-2">NL</td>
+                        <td class="px-1 py-2">DE</td>
+                        <td class="px-1 py-2">Diego Silva</td>
+                        <td class="px-1 py-2">Alice Santos</td>
+                        <td class="px-1 py-2 flex gap-2 text-lg">🏷️ ✈️ 📦 ⚙️</td>
+                        <td class="px-1 py-2 text-center flex gap-3 justify-center text-lg">
+                            <span class="text-blue-600 cursor-pointer">🔗</span>
+                            <span class="text-green-500 cursor-pointer">🔄</span>
+                            <span class="text-orange-500 cursor-pointer">⚙️</span>
+                        </td>
+                    </tr>
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="px-1 py-2">884917678708</td>
+                        <td class="px-1 py-2"><span
+                                class="bg-[#9acd32] text-white text-xs px-0.5 py-1 rounded-full">Entregue</span></td>
+                        <td class="px-1 py-2">NL</td>
+                        <td class="px-1 py-2">DE</td>
+                        <td class="px-1 py-2">Diego Silva</td>
+                        <td class="px-1 py-2">Alice Santos</td>
+                        <td class="px-1 py-2 flex gap-2 text-lg">🏷️ ✈️ 📦 ⚙️</td>
+                        <td class="px-1 py-2 text-center flex gap-3 justify-center text-lg">
+                            <span class="text-blue-600 cursor-pointer">🔗</span>
+                            <span class="text-green-500 cursor-pointer">🔄</span>
+                            <span class="text-orange-500 cursor-pointer">⚙️</span>
+                        </td>
+                    </tr>
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="px-1 py-2">884917678708</td>
+                        <td class="px-1 py-2"><span
+                                class="bg-[#ff0000] text-white text-xs px-0.5 py-1 rounded-full">Atenção</span></td>
+                        <td class="px-1 py-2">NL</td>
+                        <td class="px-1 py-2">DE</td>
+                        <td class="px-1 py-2">Diego Silva</td>
+                        <td class="px-1 py-2">Alice Santos</td>
+                        <td class="px-1 py-2 flex gap-2 text-lg">🏷️ ✈️ 📦 ⚙️</td>
+                        <td class="px-1 py-2 text-center flex gap-3 justify-center text-lg">
+                            <span class="text-blue-600 cursor-pointer">🔗</span>
+                            <span class="text-green-500 cursor-pointer">🔄</span>
+                            <span class="text-orange-500 cursor-pointer">⚙️</span>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-1 py-2">884917678708</td>
+                        <td class="px-1 py-2"><span
+                                class="bg-[#5b2ca2] text-white text-xs px-0.5 py-1 rounded-full">Coletado</span></td>
+                        <td class="px-1 py-2">NL</td>
+                        <td class="px-1 py-2">DE</td>
+                        <td class="px-1 py-2">Diego Silva</td>
+                        <td class="px-1 py-2">Alice Santosss</td>
+                        <td class="px-1 py-2 flex gap-2 text-lg">
+                            <div class="text-xs">
+                                <span class="material-symbols-outlined">
+                                    sell
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    archive
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    travel
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    unarchive
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    sentiment_satisfied
+                                </span>
+                            </div>
+                        </td>
+                        <td class="px-1 py-2 text-center flex gap-3 justify-center text-lg">
+                            <span class="text-blue-600 cursor-pointer">🔗</span>
+                            <span class="text-green-500 cursor-pointer">🔄</span>
+                            <span class="text-orange-500 cursor-pointer">⚙️</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="flex justify-between items-center mt-6">
+            <div class="flex items-center gap-2">
+                <button class="px-0.5 py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">1</button>
+                <button class="px-0.5 py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">2</button>
+                <button class="px-0.5 py-1 rounded-full bg-purple-700 text-white font-semibold">3</button>
+                <button class="px-0.5 py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">4</button>
+                <button class="px-0.5 py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">5</button>
+            </div>
+            <div class="flex items-center gap-3">
+                <button
+                    class="bg-gray-200 text-gray-700 font-medium px-5 py-2 rounded-lg hover:bg-gray-300 transition">COLUNAS</button>
+                <button
+                    class="bg-lime-500 text-white font-medium px-5 py-2 rounded-lg hover:bg-lime-600 transition">EXPORTAR
+                    CSV</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
