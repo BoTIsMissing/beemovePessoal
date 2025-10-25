@@ -23,13 +23,17 @@
                 'GRAD' 0,
                 'opsz' 24;
         }
+
+        .icon2 {
+            font-size: 14px;
+        }
     </style>
 </head>
 
 <body class="text-xs lexend bg-gray-100 min-h-screen flex items-center justify-center p-1">
     <div class="bg-white shadow-md rounded-2xl p-10 w-full max-w-6xl">
         <h1 class="text-lg font-semibold text-gray-500 mb-6">RASTREIO DE ENVIOS</h1>
-        <div class="grid grid-cols-6 gap-2 mb-8">
+        <div class="grid grid-cols-6 gap-7 mb-8">
             <div class="bg-[#4b0082] text-white rounded-[15px] p-3 flex justify-between items-center">
                 <div class="gap-1 text-sm">
                     <span class="material-symbols-outlined text-base">
@@ -93,44 +97,44 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-5 gap-2 mb-6">
+        <div class="grid grid-cols-5 gap-9 mb-6">
             <input type="text" placeholder="Ref. Cliente/AWB"
-                class="col-span-1 border rounded-[20px] px-0.5 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
+                class="col-span-1 border border-gray-300 rounded-[20px] pl-4 px-1 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
             <input type="text" placeholder="Status"
-                class="col-span-1 border rounded-[20px] px-0.5 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
+                class="col-span-1 border border-gray-300 rounded-[20px] pl-4 px-1 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
             <input type="text" placeholder="Origem"
-                class="col-span-1 border rounded-[20px] px-0.5 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
+                class="col-span-1 border border-gray-300 rounded-[20px] pl-4 px-1 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
             <input type="text" placeholder="Destino"
-                class="col-span-1 border rounded-[20px] px-0.5 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
+                class="col-span-1 border border-gray-300 rounded-[20px] pl-4 px-1 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
             <input type="text" placeholder="Destinatário"
-                class="col-span-1 border rounded-[20px] px-0.5 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
+                class="col-span-1 border border-gray-300 rounded-[20px] pl-4 px-1 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
         </div>
 
         <div class="overflow-x-auto">
             <table class="min-w-full border-t-0 border-purple-700 text-sm text-left text-gray-700">
                 <thead>
-                    <tr class="border-b-[.12rem] border-[#4d217a] ">
-                        <th class="px-1 py-2 font-medium">REF/AWB</th>
-                        <th class="px-1 py-2 font-medium">Status</th>
-                        <th class="px-1 py-2 font-medium text-center">Origem (País)</th>
-                        <th class="px-1 py-2 font-medium text-center">Destino (País)</th>
-                        <th class="px-1 py-2 font-medium text-center">Remetente</th>
-                        <th class="px-1 py-2 font-medium text-center">Destinatário</th>
-                        <th class="px-1 py-2 font-medium text-center">Progresso</th>
-                        <th class="px-1 py-2 font-medium text-center">Ações</th>
+                    <tr class="border-b-[.126rem] border-[#4d217a]">
+                        <th class="px-1 py-2 font-medium text-[#4d217a]">REF/AWB</th>
+                        <th class="px-1 py-2 font-medium text-[#4d217a]">Status</th>
+                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Origem (País)</th>
+                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Destino (País)</th>
+                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Remetente</th>
+                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Destinatário</th>
+                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Progresso</th>
+                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="border-b hover:bg-gray-50 min-h-[50px]">
-                        <td class="px-1 py-4">884917678708</td>
-                        <td class="px-1 py-4">
+                    <tr class="border-b border-b-gray-300 hover:bg-gray-50 min-h-[50px]">
+                        <td class="px-1 py-4 text-gray-400">884917678708</td>
+                        <td class="px-1 py-2">
                             <span class="bg-[#d2168d] text-white text-xs px-2 py-1 rounded-full">Em trânsito</span>
                         </td>
-                        <td class="px-1 py-2 text-center">NL</td>
-                        <td class="px-1 py-2 text-center">DE</td>
-                        <td class="px-1 py-2 text-center">Diego Silva</td>
-                        <td class="px-1 py-2 text-center">Alice Santos</td>
-                        <td class="px-1 py-4">
+                        <td class="px-1 py-2 text-center text-gray-400">NL</td>
+                        <td class="px-1 py-2 text-center text-gray-400">DE</td>
+                        <td class="px-1 py-2 text-center text-gray-400">Diego Silva</td>
+                        <td class="px-1 py-2 text-center text-gray-400">Alice Santos</td>
+                        <td class="px-1 py-2">
                             <div class="flex justify-center gap-1">
                                 <span class="material-symbols-outlined text-[#4d217a]">sell</span>
                                 <span class="material-symbols-outlined text-[#861a80]">archive</span>
@@ -139,23 +143,27 @@
                                 <span class="material-symbols-outlined text-gray-300">sentiment_satisfied</span>
                             </div>
                         </td>
-                        <td class="px-1 py-2 text-center flex gap-1 justify-center text-lg">
-                            <span class="material-symbols-outlined">visibility</span>
-                            <span class="material-symbols-outlined">share</span>
-                            <span class="material-symbols-outlined">notifications</span>
+                        <td
+                            class="px-1 py-3 text-center flex items-center justify-center gap-1 text-lg leading-none h-[50px] text-white font-normal">
+                            <span
+                                class="material-symbols-outlined bg-[#3779f3] rounded-full p-[.21rem] icon2">visibility</span>
+                            <span
+                                class="material-symbols-outlined bg-[#27bb20] rounded-full p-[.21rem] icon2">share</span>
+                            <span
+                                class="material-symbols-outlined bg-[#f79011] rounded-full p-[.21rem] icon2">notifications</span>
                         </td>
                     </tr>
 
-                    <tr class="border-b hover:bg-gray-50 min-h-[50px]">
-                        <td class="px-1 py-4">884917678708</td>
-                        <td class="px-1 py-4">
+                    <tr class="border-b border-b-gray-300 hover:bg-gray-50 min-h-[50px]">
+                        <td class="px-1 py-4 text-gray-400">884917678708</td>
+                        <td class="px-1 py-2">
                             <span class="bg-[#5b2ca2] text-white text-xs px-2 py-1 rounded-full">Etiqueta emitida</span>
                         </td>
-                        <td class="px-1 py-2 text-center">NL</td>
-                        <td class="px-1 py-2 text-center">DE</td>
-                        <td class="px-1 py-2 text-center">Diego Silva</td>
-                        <td class="px-1 py-2 text-center">Alice Santos</td>
-                        <td class="px-1 py-4">
+                        <td class="px-1 py-2 text-center text-gray-400">NL</td>
+                        <td class="px-1 py-2 text-center text-gray-400">DE</td>
+                        <td class="px-1 py-2 text-center text-gray-400">Diego Silva</td>
+                        <td class="px-1 py-2 text-center text-gray-400">Alice Santos</td>
+                        <td class="px-1 py-2">
                             <div class="flex justify-center gap-1">
                                 <span class="material-symbols-outlined text-[#4d217a]">sell</span>
                                 <span class="material-symbols-outlined text-gray-300">archive</span>
@@ -164,23 +172,27 @@
                                 <span class="material-symbols-outlined text-gray-300">sentiment_satisfied</span>
                             </div>
                         </td>
-                        <td class="px-1 py-2 text-center flex gap-1 justify-center text-lg">
-                            <span class="material-symbols-outlined">visibility</span>
-                            <span class="material-symbols-outlined">share</span>
-                            <span class="material-symbols-outlined">notifications</span>
+                        <td
+                            class="px-1 py-3 text-center flex items-center justify-center gap-1 text-lg leading-none h-[50px] text-white font-normal">
+                            <span
+                                class="material-symbols-outlined bg-[#3779f3] rounded-full p-[.21rem] icon2">visibility</span>
+                            <span
+                                class="material-symbols-outlined bg-[#27bb20] rounded-full p-[.21rem] icon2">share</span>
+                            <span
+                                class="material-symbols-outlined bg-[#f79011] rounded-full p-[.21rem] icon2">notifications</span>
                         </td>
                     </tr>
 
-                    <tr class="border-b hover:bg-gray-50 min-h-[50px]">
-                        <td class="px-1 py-4">884917678708</td>
-                        <td class="px-1 py-4">
+                    <tr class="border-b border-b-gray-300 hover:bg-gray-50 min-h-[50px]">
+                        <td class="px-1 py-4 text-gray-400">884917678708</td>
+                        <td class="px-1 py-2">
                             <span class="bg-[#9acd32] text-white text-xs px-2 py-1 rounded-full">Entregue</span>
                         </td>
-                        <td class="px-1 py-2 text-center">NL</td>
-                        <td class="px-1 py-2 text-center">DE</td>
-                        <td class="px-1 py-2 text-center">Diego Silva</td>
-                        <td class="px-1 py-2 text-center">Alice Santos</td>
-                        <td class="px-1 py-4">
+                        <td class="px-1 py-2 text-center text-gray-400">NL</td>
+                        <td class="px-1 py-2 text-center text-gray-400">DE</td>
+                        <td class="px-1 py-2 text-center text-gray-400">Diego Silva</td>
+                        <td class="px-1 py-2 text-center text-gray-400">Alice Santos</td>
+                        <td class="px-1 py-2">
                             <div class="flex justify-center gap-1">
                                 <span class="material-symbols-outlined text-[#4d217a]">sell</span>
                                 <span class="material-symbols-outlined text-[#861a80]">archive</span>
@@ -189,23 +201,27 @@
                                 <span class="material-symbols-outlined text-[#a0cb3d]">sentiment_satisfied</span>
                             </div>
                         </td>
-                        <td class="px-1 py-2 text-center flex gap-1 justify-center text-lg">
-                            <span class="material-symbols-outlined">visibility</span>
-                            <span class="material-symbols-outlined">share</span>
-                            <span class="material-symbols-outlined">notifications</span>
+                        <td
+                            class="px-1 py-3 text-center flex items-center justify-center gap-1 text-lg leading-none h-[50px] text-white font-normal">
+                            <span
+                                class="material-symbols-outlined bg-[#3779f3] rounded-full p-[.21rem] icon2">visibility</span>
+                            <span
+                                class="material-symbols-outlined bg-[#27bb20] rounded-full p-[.21rem] icon2">share</span>
+                            <span
+                                class="material-symbols-outlined bg-[#f79011] rounded-full p-[.21rem] icon2">notifications</span>
                         </td>
                     </tr>
 
-                    <tr class="border-b hover:bg-gray-50 min-h-[50px]">
-                        <td class="px-1 py-4">884917678708</td>
-                        <td class="px-1 py-4">
+                    <tr class="border-b border-b-gray-300 hover:bg-gray-50 min-h-[50px]">
+                        <td class="px-1 py-4 text-gray-400">884917678708</td>
+                        <td class="px-1 py-2">
                             <span class="bg-[#ff0000] text-white text-xs px-2 py-1 rounded-full">Atenção</span>
                         </td>
-                        <td class="px-1 py-2 text-center">NL</td>
-                        <td class="px-1 py-2 text-center">DE</td>
-                        <td class="px-1 py-2 text-center">Diego Silva</td>
-                        <td class="px-1 py-2 text-center">Alice Santos</td>
-                        <td class="px-1 py-4">
+                        <td class="px-1 py-2 text-center text-gray-400">NL</td>
+                        <td class="px-1 py-2 text-center text-gray-400">DE</td>
+                        <td class="px-1 py-2 text-center text-gray-400">Diego Silva</td>
+                        <td class="px-1 py-2 text-center text-gray-400">Alice Santos</td>
+                        <td class="px-1 py-2">
                             <div class="flex justify-center gap-1">
                                 <span class="material-symbols-outlined text-[#4d217a]">sell</span>
                                 <span class="material-symbols-outlined text-[#861a80]">archive</span>
@@ -214,23 +230,27 @@
                                 <span class="material-symbols-outlined text-[#d40000]">warning</span>
                             </div>
                         </td>
-                        <td class="px-1 py-2 text-center flex gap-1 justify-center text-lg">
-                            <span class="material-symbols-outlined">visibility</span>
-                            <span class="material-symbols-outlined">share</span>
-                            <span class="material-symbols-outlined">notifications</span>
+                        <td
+                            class="px-1 py-3 text-center flex items-center justify-center gap-1 text-lg leading-none h-[50px] text-white font-normal">
+                            <span
+                                class="material-symbols-outlined bg-[#3779f3] rounded-full p-[.21rem] icon2">visibility</span>
+                            <span
+                                class="material-symbols-outlined bg-[#27bb20] rounded-full p-[.21rem] icon2">share</span>
+                            <span
+                                class="material-symbols-outlined bg-[#f79011] rounded-full p-[.21rem] icon2">notifications</span>
                         </td>
                     </tr>
 
-                    <tr class="hover:bg-gray-50 min-h-[50px]">
-                        <td class="px-1 py-4">884917678708</td>
-                        <td class="px-1 py-4">
+                    <tr class="border-b-2 border-[#4d217a]  hover:bg-gray-50 min-h-[50px]">
+                        <td class="px-1 py-4 text-gray-400">884917678708</td>
+                        <td class="px-1 py-2">
                             <span class="bg-[#5b2ca2] text-white text-xs px-2 py-1 rounded-full">Coletado</span>
                         </td>
-                        <td class="px-1 py-2 text-center">NL</td>
-                        <td class="px-1 py-2 text-center">DE</td>
-                        <td class="px-1 py-2 text-center">Diego Silva</td>
-                        <td class="px-1 py-2 text-center">Alice Santosss</td>
-                        <td class="px-1 py-4">
+                        <td class="px-1 py-2 text-center text-gray-400">NL</td>
+                        <td class="px-1 py-2 text-center text-gray-400">DE</td>
+                        <td class="px-1 py-2 text-center text-gray-400">Diego Silva</td>
+                        <td class="px-1 py-2 text-center text-gray-400">Alice Santos</td>
+                        <td class="px-1 py-2">
                             <div class="flex justify-center gap-1">
                                 <span class="material-symbols-outlined text-[#4d217a]">sell</span>
                                 <span class="material-symbols-outlined text-[#861a80]">archive</span>
@@ -239,10 +259,14 @@
                                 <span class="material-symbols-outlined text-gray-300">sentiment_satisfied</span>
                             </div>
                         </td>
-                        <td class="px-1 py-3 text-center flex gap-1 justify-center text-lg">
-                            <span class="material-symbols-outlined">visibility</span>
-                            <span class="material-symbols-outlined">share</span>
-                            <span class="material-symbols-outlined">notifications</span>
+                        <td
+                            class="px-1 py-3 text-center flex items-center justify-center gap-1 text-lg leading-none h-[50px] text-white font-normal">
+                            <span
+                                class="material-symbols-outlined bg-[#3779f3] rounded-full p-[.21rem] icon2">visibility</span>
+                            <span
+                                class="material-symbols-outlined bg-[#27bb20] rounded-full p-[.21rem] icon2">share</span>
+                            <span
+                                class="material-symbols-outlined bg-[#f79011] rounded-full p-[.21rem] icon2">notifications</span>
                         </td>
                     </tr>
                 </tbody>
@@ -252,21 +276,23 @@
 
         <div class="flex justify-between items-center mt-6">
             <div class="flex items-center gap-2">
+                <button class="px-[.55rem] py-1 rounded-[20px] text-gray-600 hover:bg-gray-100">ᐸ</button>
                 <button
-                    class="px-0.5 py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">1</button>
+                    class="px-[.55rem] py-1 rounded-[20px] border border-gray-300 text-gray-600 hover:bg-gray-100">1</button>
                 <button
-                    class="px-0.5 py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">2</button>
-                <button class="px-0.5 py-1 rounded-full bg-purple-700 text-white font-semibold">3</button>
+                    class="px-[.55rem] py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">2</button>
+                <button class="px-[.55rem] py-1 rounded-full bg-purple-700 text-white font-semibold">3</button>
                 <button
-                    class="px-0.5 py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">4</button>
+                    class="px-[.55rem] py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">4</button>
                 <button
-                    class="px-0.5 py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">5</button>
+                    class="px-[.55rem] py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">5</button>
+                <button class="px-[.55rem] py-1 rounded-[20px] text-gray-600 hover:bg-gray-100">ᐳ</button>
             </div>
             <div class="flex items-center gap-1">
                 <button
                     class="bg-gray-200 text-gray-700 font-medium px-5 py-2 rounded-[20px] hover:bg-gray-300 transition">COLUNAS</button>
                 <button
-                    class="bg-lime-500 text-white font-medium px-5 py-2 rounded-[20px] hover:bg-lime-600 transition">EXPORTAR
+                    class="bg-[#a0cb3d] text-white font-medium px-5 py-2 rounded-[20px] hover:bg-[#94bb38] transition">EXPORTAR
                     CSV</button>
             </div>
         </div>
