@@ -2,301 +2,147 @@
 <html lang="pt-br">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Cotação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rastreamento de Envios</title>
     <link rel="stylesheet" href="./src/style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
-        .lexend {
-            font-family: "Lexend", sans-serif;
-        }
-
-        .material-symbols-outlined {
-            font-size: 17px;
-            font-variation-settings:
-                'FILL' 1,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24;
-        }
-
-        .icon2 {
-            font-size: 14px;
-        }
-    </style>
 </head>
 
-<body class="text-xs lexend bg-gray-100 min-h-screen flex items-center justify-center p-1">
-    <div class="bg-white shadow-md rounded-2xl p-10 w-full max-w-6xl">
-        <h1 class="text-lg font-semibold text-gray-500 mb-6">RASTREIO DE ENVIOS</h1>
-        <div class="grid grid-cols-6 gap-7 mb-8">
-            <div class="bg-[#4b0082] text-white rounded-[15px] p-3 flex justify-between items-center">
-                <div class="gap-1 text-sm">
-                    <span class="material-symbols-outlined text-base">
-                        sell
-                    </span>
-                    <span class="flex align-text-bottom text-xs max-w-[15px]">Etiquetas emitidas</span>
+<body class="bg-gray-50 flex justify-center items-center min-h-screen">
+
+    <div class="bg-white w-[95%] max-w-6xl rounded-2xl shadow p-6">
+        <h2 class="text-gray-800 font-semibold text-lg mb-6">NOVA COTAÇÃO</h2>
+
+        <div class="grid grid-cols-12 gap-5">
+            <!-- Lado esquerdo -->
+            <div class="col-span-12 md:col-span-4 flex flex-col gap-4">
+
+                <!-- Origem -->
+                <div class="bg-[#f4d9f5] rounded-xl p-4">
+                    <h3 class="text-[#a200a2] font-semibold mb-3 text-sm uppercase">Origem</h3>
+                    <label class="block text-xs text-gray-600 mb-1">País</label>
+                    <div class="flex items-center gap-2 mb-3">
+                        <input type="text" value="Brasil"
+                            class="border border-gray-300 rounded-[20px] px-3 py-1.5 text-sm w-full bg-white" />
+                    </div>
+
+                    <label class="block text-xs text-gray-600 mb-1">CEP/ZIP</label>
+                    <input type="text" placeholder="Ex: 03110-200 ou 33126"
+                        class="border border-gray-300 rounded-[20px] px-3 py-1.5 text-sm w-full bg-white" />
                 </div>
-                <p class="text-3xl font-semibold text-right mt-2">100</p>
+
+                <!-- Destino -->
+                <div class="bg-[#e8e7fe] border border-[#bfbdfc] rounded-xl p-4">
+                    <h3 class="text-[#3b3bd8] font-semibold mb-3 text-sm uppercase">Destino</h3>
+                    <label class="block text-xs text-gray-600 mb-1">País</label>
+                    <div class="flex items-center gap-2 mb-3">
+                        <img src="https://flagcdn.com/w20/us.png" class="w-5 h-3" alt="US">
+                        <input type="text" value="Estados Unidos"
+                            class="border border-gray-300 rounded-lg px-3 py-1.5 text-sm w-full" />
+                    </div>
+
+                    <label class="block text-xs text-gray-600 mb-1">CEP/ZIP</label>
+                    <input type="text" placeholder="Ex: 03110-200 ou 33126"
+                        class="border border-gray-300 rounded-lg px-3 py-1.5 text-sm w-full" />
+                </div>
+
+                <!-- Total Geral -->
+                <div class="border border-lime-400 bg-lime-50 rounded-xl p-4">
+                    <h3 class="text-lime-600 font-semibold mb-2 text-sm uppercase">Total Geral</h3>
+                    <ul class="text-xs text-gray-700 space-y-1">
+                        <li><b>Peso Total:</b> 1.38 kg</li>
+                        <li><b>Tamanho Total:</b> 1.006 m³</li>
+                        <li><b>Peso Real:</b> 1.38 kg</li>
+                        <li><b>Peso Cubado:</b> 201.20 kg</li>
+                        <li><b>Peso Taxado:</b> 201.20 kg</li>
+                        <li><b>Considerado:</b> <span class="font-semibold text-gray-900">Peso taxado (cubado)</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
+            <!-- Lado direito -->
+            <div class="col-span-12 md:col-span-8">
+                <h3 class="text-[#7f3cff] font-semibold mb-3 text-sm uppercase">Itens / Volumes</h3>
 
-            <div class="bg-[#861a80] text-white rounded-[15px] p-3 flex justify-between items-center">
-                <div class="flex flex-col justify-start">
-                    <span class="material-symbols-outlined text-sm mb-5">
-                        archive
-                    </span>
-                    <span class="text-xs font-normal">Coletado</span>
-                </div>
-                <p class="text-3xl font-semibold">5</p>
-            </div>
+                <div class="flex flex-col gap-3">
+                    <!-- Item -->
+                    <div class="bg-[#f9fdf5] border border-gray-200 rounded-xl p-3">
+                        <div class="grid grid-cols-12 gap-2 items-center">
+                            <input type="number" placeholder="Quantidade"
+                                class="col-span-2 border border-gray-300 rounded-lg px-2 py-1 text-sm" />
+                            <input type="number" placeholder="Peso (kg)"
+                                class="col-span-2 border border-gray-300 rounded-lg px-2 py-1 text-sm" />
+                            <input type="number" placeholder="Comprimento (cm)"
+                                class="col-span-2 border border-gray-300 rounded-lg px-2 py-1 text-sm" />
+                            <input type="number" placeholder="Largura (cm)"
+                                class="col-span-2 border border-gray-300 rounded-lg px-2 py-1 text-sm" />
+                            <input type="number" placeholder="Altura (cm)"
+                                class="col-span-2 border border-gray-300 rounded-lg px-2 py-1 text-sm" />
 
-
-            <div class="bg-[#bf1486] text-white rounded-[15px] p-3 flex justify-between items-center">
-                <div class="flex flex-col justify-start">
-                    <span class="material-symbols-outlined text-sm mb-5">
-                        travel
-                    </span>
-                    <span class="text-xs font-normal">Em Trânsito</span>
-                </div>
-                <p class="text-3xl font-semibold">5</p>
-            </div>
-
-
-
-            <div class="bg-[#c35f5f] text-white rounded-[15px] p-3 flex justify-between items-center">
-                <div class="flex flex-col justify-start">
-                    <span class="material-symbols-outlined text-sm mb-5">unarchive</span>
-                    <span>Liberado</span>
-                </div>
-                <p class="text-3xl font-semibold">5</p>
-            </div>
-
-
-            <div class="bg-[#a0cb3d] text-white rounded-[15px] p-3 flex justify-between items-center">
-                <div class="flex flex-col justify-start">
-                    <span class="material-symbols-outlined text-sm mb-5">
-                        sentiment_satisfied
-                    </span>
-                    <span>Entregue</span>
-                </div>
-                <p class="text-3xl font-semibold">5</p>
-            </div>
-
-
-            <div class="bg-[#d40000] text-white rounded-[15px] p-3 flex justify-between items-center">
-                <div class="flex flex-col justify-start">
-                    <span class="material-symbols-outlined text-sm mb-5">warning</span>
-                    <span>Atenção</span>
-                </div>
-                <p class="text-3xl font-semibold text-center mt-2">12</p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-5 gap-9 mb-6">
-            <input type="text" placeholder="Ref. Cliente/AWB"
-                class="col-span-1 border border-gray-300 rounded-[20px] pl-4 px-1 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
-            <input type="text" placeholder="Status"
-                class="col-span-1 border border-gray-300 rounded-[20px] pl-4 px-1 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
-            <input type="text" placeholder="Origem"
-                class="col-span-1 border border-gray-300 rounded-[20px] pl-4 px-1 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
-            <input type="text" placeholder="Destino"
-                class="col-span-1 border border-gray-300 rounded-[20px] pl-4 px-1 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
-            <input type="text" placeholder="Destinatário"
-                class="col-span-1 border border-gray-300 rounded-[20px] pl-4 px-1 py-2 text-sm focus:ring-2 focus:ring-blue-300 outline-none">
-        </div>
-
-        <div class="overflow-x-auto">
-            <table class="min-w-full border-t-0 border-purple-700 text-sm text-left text-gray-700">
-                <thead>
-                    <tr class="border-b-[.126rem] border-[#4d217a]">
-                        <th class="px-1 py-2 font-medium text-[#4d217a]">REF/AWB</th>
-                        <th class="px-1 py-2 font-medium text-[#4d217a]">Status</th>
-                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Origem (País)</th>
-                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Destino (País)</th>
-                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Remetente</th>
-                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Destinatário</th>
-                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Progresso</th>
-                        <th class="px-1 py-2 font-medium text-[#4d217a] text-center">Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="border-b border-b-gray-300 hover:bg-gray-50 min-h-[50px]">
-                        <td class="px-1 py-4 text-gray-400">884917678708</td>
-                        <td class="px-1 py-2">
-                            <span class="bg-[#d2168d] text-white text-xs px-2 py-1 rounded-full">Em trânsito</span>
-                        </td>
-                        <td class="px-1 py-2 text-center text-gray-400">NL</td>
-                        <td class="px-1 py-2 text-center text-gray-400">DE</td>
-                        <td class="px-1 py-2 text-center text-gray-400">Diego Silva</td>
-                        <td class="px-1 py-2 text-center text-gray-400">Alice Santos</td>
-                        <td class="px-1 py-2">
-                            <div class="flex justify-center gap-1">
-                                <span class="material-symbols-outlined text-[#4d217a]">sell</span>
-                                <span class="material-symbols-outlined text-[#861a80]">archive</span>
-                                <span class="material-symbols-outlined text-[#bf1486]">travel</span>
-                                <span class="material-symbols-outlined text-gray-300">unarchive</span>
-                                <span class="material-symbols-outlined text-gray-300">sentiment_satisfied</span>
+                            <div class="col-span-2 flex justify-end gap-1">
+                                <button class="bg-red-500 hover:bg-red-600 text-white rounded-full p-1.5">
+                                    <span class="material-symbols-outlined text-sm">close</span>
+                                </button>
+                                <button class="bg-green-500 hover:bg-green-600 text-white rounded-full p-1.5">
+                                    <span class="material-symbols-outlined text-sm">add</span>
+                                </button>
                             </div>
-                        </td>
-                        <td
-                            class="px-1 py-3 text-center flex items-center justify-center gap-1 text-lg leading-none h-[50px] text-white font-normal">
-                            <span
-                                class="material-symbols-outlined bg-[#3779f3] rounded-full p-[.21rem] icon2">visibility</span>
-                            <span
-                                class="material-symbols-outlined bg-[#27bb20] rounded-full p-[.21rem] icon2">share</span>
-                            <span
-                                class="material-symbols-outlined bg-[#f79011] rounded-full p-[.21rem] icon2">notifications</span>
-                        </td>
-                    </tr>
+                        </div>
 
-                    <tr class="border-b border-b-gray-300 hover:bg-gray-50 min-h-[50px]">
-                        <td class="px-1 py-4 text-gray-400">884917678708</td>
-                        <td class="px-1 py-2">
-                            <span class="bg-[#5b2ca2] text-white text-xs px-2 py-1 rounded-full">Etiqueta emitida</span>
-                        </td>
-                        <td class="px-1 py-2 text-center text-gray-400">NL</td>
-                        <td class="px-1 py-2 text-center text-gray-400">DE</td>
-                        <td class="px-1 py-2 text-center text-gray-400">Diego Silva</td>
-                        <td class="px-1 py-2 text-center text-gray-400">Alice Santos</td>
-                        <td class="px-1 py-2">
-                            <div class="flex justify-center gap-1">
-                                <span class="material-symbols-outlined text-[#4d217a]">sell</span>
-                                <span class="material-symbols-outlined text-gray-300">archive</span>
-                                <span class="material-symbols-outlined text-gray-300">travel</span>
-                                <span class="material-symbols-outlined text-gray-300">unarchive</span>
-                                <span class="material-symbols-outlined text-gray-300">sentiment_satisfied</span>
+                        <div class="flex justify-between text-xs text-gray-700 bg-lime-100 rounded-lg px-3 py-1 mt-2">
+                            <span>Bruto: <b>1.00 kg</b></span>
+                            <span>Cubado: <b>201.20 kg</b></span>
+                            <span>Volume: <b>1.006 m³</b></span>
+                        </div>
+                    </div>
+
+                    <!-- Copie este bloco para mais itens -->
+                    <div class="bg-[#f9fdf5] border border-gray-200 rounded-xl p-3">
+                        <div class="grid grid-cols-12 gap-2 items-center">
+                            <input type="number" placeholder="Quantidade"
+                                class="col-span-2 border border-gray-300 rounded-lg px-2 py-1 text-sm" />
+                            <input type="number" placeholder="Peso (kg)"
+                                class="col-span-2 border border-gray-300 rounded-lg px-2 py-1 text-sm" />
+                            <input type="number" placeholder="Comprimento (cm)"
+                                class="col-span-2 border border-gray-300 rounded-lg px-2 py-1 text-sm" />
+                            <input type="number" placeholder="Largura (cm)"
+                                class="col-span-2 border border-gray-300 rounded-lg px-2 py-1 text-sm" />
+                            <input type="number" placeholder="Altura (cm)"
+                                class="col-span-2 border border-gray-300 rounded-lg px-2 py-1 text-sm" />
+
+                            <div class="col-span-2 flex justify-end gap-1">
+                                <button class="bg-red-500 hover:bg-red-600 text-white rounded-full p-1.5">
+                                    <span class="material-symbols-outlined text-sm">close</span>
+                                </button>
+                                <button class="bg-green-500 hover:bg-green-600 text-white rounded-full p-1.5">
+                                    <span class="material-symbols-outlined text-sm">add</span>
+                                </button>
                             </div>
-                        </td>
-                        <td
-                            class="px-1 py-3 text-center flex items-center justify-center gap-1 text-lg leading-none h-[50px] text-white font-normal">
-                            <span
-                                class="material-symbols-outlined bg-[#3779f3] rounded-full p-[.21rem] icon2">visibility</span>
-                            <span
-                                class="material-symbols-outlined bg-[#27bb20] rounded-full p-[.21rem] icon2">share</span>
-                            <span
-                                class="material-symbols-outlined bg-[#f79011] rounded-full p-[.21rem] icon2">notifications</span>
-                        </td>
-                    </tr>
+                        </div>
 
-                    <tr class="border-b border-b-gray-300 hover:bg-gray-50 min-h-[50px]">
-                        <td class="px-1 py-4 text-gray-400">884917678708</td>
-                        <td class="px-1 py-2">
-                            <span class="bg-[#9acd32] text-white text-xs px-2 py-1 rounded-full">Entregue</span>
-                        </td>
-                        <td class="px-1 py-2 text-center text-gray-400">NL</td>
-                        <td class="px-1 py-2 text-center text-gray-400">DE</td>
-                        <td class="px-1 py-2 text-center text-gray-400">Diego Silva</td>
-                        <td class="px-1 py-2 text-center text-gray-400">Alice Santos</td>
-                        <td class="px-1 py-2">
-                            <div class="flex justify-center gap-1">
-                                <span class="material-symbols-outlined text-[#4d217a]">sell</span>
-                                <span class="material-symbols-outlined text-[#861a80]">archive</span>
-                                <span class="material-symbols-outlined text-[#bf1486]">travel</span>
-                                <span class="material-symbols-outlined text-[#c35f5f]">unarchive</span>
-                                <span class="material-symbols-outlined text-[#a0cb3d]">sentiment_satisfied</span>
-                            </div>
-                        </td>
-                        <td
-                            class="px-1 py-3 text-center flex items-center justify-center gap-1 text-lg leading-none h-[50px] text-white font-normal">
-                            <span
-                                class="material-symbols-outlined bg-[#3779f3] rounded-full p-[.21rem] icon2">visibility</span>
-                            <span
-                                class="material-symbols-outlined bg-[#27bb20] rounded-full p-[.21rem] icon2">share</span>
-                            <span
-                                class="material-symbols-outlined bg-[#f79011] rounded-full p-[.21rem] icon2">notifications</span>
-                        </td>
-                    </tr>
+                        <div class="flex justify-between text-xs text-gray-700 bg-lime-100 rounded-lg px-3 py-1 mt-2">
+                            <span>Bruto: <b>1.00 kg</b></span>
+                            <span>Cubado: <b>201.20 kg</b></span>
+                            <span>Volume: <b>1.006 m³</b></span>
+                        </div>
+                    </div>
+                </div>
 
-                    <tr class="border-b border-b-gray-300 hover:bg-gray-50 min-h-[50px]">
-                        <td class="px-1 py-4 text-gray-400">884917678708</td>
-                        <td class="px-1 py-2">
-                            <span class="bg-[#ff0000] text-white text-xs px-2 py-1 rounded-full">Atenção</span>
-                        </td>
-                        <td class="px-1 py-2 text-center text-gray-400">NL</td>
-                        <td class="px-1 py-2 text-center text-gray-400">DE</td>
-                        <td class="px-1 py-2 text-center text-gray-400">Diego Silva</td>
-                        <td class="px-1 py-2 text-center text-gray-400">Alice Santos</td>
-                        <td class="px-1 py-2">
-                            <div class="flex justify-center gap-1">
-                                <span class="material-symbols-outlined text-[#4d217a]">sell</span>
-                                <span class="material-symbols-outlined text-[#861a80]">archive</span>
-                                <span class="material-symbols-outlined text-[#bf1486]">travel</span>
-                                <span class="material-symbols-outlined text-[#c35f5f]">unarchive</span>
-                                <span class="material-symbols-outlined text-[#d40000]">warning</span>
-                            </div>
-                        </td>
-                        <td
-                            class="px-1 py-3 text-center flex items-center justify-center gap-1 text-lg leading-none h-[50px] text-white font-normal">
-                            <span
-                                class="material-symbols-outlined bg-[#3779f3] rounded-full p-[.21rem] icon2">visibility</span>
-                            <span
-                                class="material-symbols-outlined bg-[#27bb20] rounded-full p-[.21rem] icon2">share</span>
-                            <span
-                                class="material-symbols-outlined bg-[#f79011] rounded-full p-[.21rem] icon2">notifications</span>
-                        </td>
-                    </tr>
-
-                    <tr class="border-b-2 border-[#4d217a]  hover:bg-gray-50 min-h-[50px]">
-                        <td class="px-1 py-4 text-gray-400">884917678708</td>
-                        <td class="px-1 py-2">
-                            <span class="bg-[#5b2ca2] text-white text-xs px-2 py-1 rounded-full">Coletado</span>
-                        </td>
-                        <td class="px-1 py-2 text-center text-gray-400">NL</td>
-                        <td class="px-1 py-2 text-center text-gray-400">DE</td>
-                        <td class="px-1 py-2 text-center text-gray-400">Diego Silva</td>
-                        <td class="px-1 py-2 text-center text-gray-400">Alice Santos</td>
-                        <td class="px-1 py-2">
-                            <div class="flex justify-center gap-1">
-                                <span class="material-symbols-outlined text-[#4d217a]">sell</span>
-                                <span class="material-symbols-outlined text-[#861a80]">archive</span>
-                                <span class="material-symbols-outlined text-gray-300">travel</span>
-                                <span class="material-symbols-outlined text-gray-300">unarchive</span>
-                                <span class="material-symbols-outlined text-gray-300">sentiment_satisfied</span>
-                            </div>
-                        </td>
-                        <td
-                            class="px-1 py-3 text-center flex items-center justify-center gap-1 text-lg leading-none h-[50px] text-white font-normal">
-                            <span
-                                class="material-symbols-outlined bg-[#3779f3] rounded-full p-[.21rem] icon2">visibility</span>
-                            <span
-                                class="material-symbols-outlined bg-[#27bb20] rounded-full p-[.21rem] icon2">share</span>
-                            <span
-                                class="material-symbols-outlined bg-[#f79011] rounded-full p-[.21rem] icon2">notifications</span>
-                        </td>
-                    </tr>
-                </tbody>
-
-            </table>
-        </div>
-
-        <div class="flex justify-between items-center mt-6">
-            <div class="flex items-center gap-2">
-                <button class="px-[.55rem] py-1 rounded-[20px] text-gray-600 hover:bg-gray-100">ᐸ</button>
-                <button
-                    class="px-[.55rem] py-1 rounded-[20px] border border-gray-300 text-gray-600 hover:bg-gray-100">1</button>
-                <button
-                    class="px-[.55rem] py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">2</button>
-                <button class="px-[.55rem] py-1 rounded-full bg-purple-700 text-white font-semibold">3</button>
-                <button
-                    class="px-[.55rem] py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">4</button>
-                <button
-                    class="px-[.55rem] py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">5</button>
-                <button class="px-[.55rem] py-1 rounded-[20px] text-gray-600 hover:bg-gray-100">ᐳ</button>
-            </div>
-            <div class="flex items-center gap-1">
-                <button
-                    class="bg-gray-200 text-gray-700 font-medium px-5 py-2 rounded-[20px] hover:bg-gray-300 transition">COLUNAS</button>
-                <button
-                    class="bg-[#a0cb3d] text-white font-medium px-5 py-2 rounded-[20px] hover:bg-[#94bb38] transition">EXPORTAR
-                    CSV</button>
+                <!-- Botão Calcular -->
+                <div class="flex justify-end mt-6">
+                    <button
+                        class="bg-[#7f3cff] hover:bg-[#692dd9] text-white font-semibold text-sm px-8 py-2 rounded-lg">
+                        CALCULAR
+                    </button>
+                </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
