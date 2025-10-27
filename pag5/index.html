@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus Chamados</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+        .lexend {
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 flex justify-center items-center min-h-screen lexend">
+
+    <div class="bg-white w-[90%] max-w-6xl rounded-2xl shadow p-6">
+        <!-- Cabeçalho -->
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-gray-800 font-semibold text-lg">Meus chamados</h1>
+            <button class="bg-[#be1384] hover:bg-[#a50b71] text-white text-sm px-7 py-2 rounded-full shadow">
+                NOVA COTAÇÃO
+            </button>
+        </div>
+
+        <!-- Filtros -->
+        <div class="flex flex-wrap gap-3 mb-6">
+            <input type="text" placeholder="Nº Ticket"
+                class="border border-gray-300 rounded-lg px-3 py-2 text-sm w-24" />
+            <input type="text" placeholder="Assunto" class="border border-gray-300 rounded-lg px-3 py-2 text-sm w-24" />
+            <input type="text" placeholder="Categoria"
+                class="border border-gray-300 rounded-lg px-3 py-2 text-sm w-24" />
+            <input type="text" placeholder="Status" class="border border-gray-300 rounded-lg px-3 py-2 text-sm w-24" />
+
+        </div>
+
+        <!-- Tabela -->
+        <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left text-gray-700 border-spacing-y-2">
+                <thead class="text-gray-600 text-xs">
+                    <tr class="text-[#4b0082] border-b-2 border-b-[#4b0082]">
+                        <th class="px-4 py-2 text-left">Nº Ticket</th>
+                        <th class="px-4 py-2 text-left">Assunto</th>
+                        <th class="px-4 py-2 text-left">Categoria</th>
+                        <th class="px-4 py-2 text-left">Status</th>
+                        <th class="px-4 py-2 text-left">Atualizado</th>
+                        <th class="px-4 py-2 text-center">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Linha -->
+                    <tr class="bg-white border-b border-b-gray-200 rounded-xl ">
+                        <td class="px-4 py-2 text-left">
+                            <button
+                                class="border border-[#ff00ff] text-[#ff00ff] rounded-full px-2 text-xs font-medium hover:bg-[#ff00ff] hover:text-white transition">TCK-0001</button>
+                        </td>
+                        <td class="px-4 py-2 text-left">São Paulo</td>
+                        <td class="px-4 py-2 text-left">Miami</td>
+                        <td class="px-4 py-2 text-left">
+                            <span class="bg-[#1a71f8] text-white text-xs px-3 py-1 rounded-full flex w-28">Em análise</span>
+                        </td>
+                        <td class="px-4 py-2 text-left">Hoje 10:05</td>
+                        
+                        <td class="px-4 py-2 flex justify-center gap-2">
+                            
+                            <button
+                                class="bg-blue-500 text-white p-1 rounded-full hover:bg-blue-600 material-symbols-outlined">visibility</button>
+                        </td>
+                    </tr>
+
+                    
+                    <tr class="bg-white border-b border-b-gray-200 rounded-xl ">
+                        <td class="px-4 py-2 text-left">
+                            <button
+                                class="border border-[#ff00ff] text-[#ff00ff] rounded-full px-2 text-xs font-medium hover:bg-[#ff00ff] hover:text-white transition">TCK-0001</button>
+                        </td>
+                        <td class="px-4 py-2 text-left">São Paulo</td>
+                        <td class="px-4 py-2 text-left">Miami</td>
+                        <td class="px-4 py-2 text-left">
+                            <span class="bg-[#1a71f8] text-white text-xs px-3 py-1 rounded-full flex w-28">Em análise</span>
+                        </td>
+                        <td class="px-4 py-2 text-left">Hoje 10:05</td>
+                        <td class="px-4 py-2 flex justify-center gap-2">
+                            
+                            <button
+                                class="bg-blue-500 text-white p-1 rounded-full hover:bg-blue-600 material-symbols-outlined">visibility</button>
+                        </td>
+                    </tr>
+
+                    <tr class="bg-white border-b border-b-gray-200 rounded-xl ">
+                        <td class="px-4 py-2 text-left">
+                            <button
+                                class="border border-[#ff00ff] text-[#ff00ff] rounded-full px-2 text-xs font-medium hover:bg-[#ff00ff] hover:text-white transition">TCK-0001</button>
+                        </td>
+                        <td class="px-4 py-2 text-left">São Paulo</td>
+                        <td class="px-4 py-2 text-left">Miami</td>
+                        <td class="px-4 py-2 text-left">
+                            <span class="bg-[#1cbd13] text-white text-xs px-3 py-1 rounded-full flex w-28">Resolvido</span>
+                        </td>
+                        <td class="px-4 py-2 text-left">Hoje 10:05</td>
+
+                        
+                        <td class="px-4 py-2 flex justify-center gap-2">
+                            
+                            <button
+                                class="bg-blue-500 text-white p-1 rounded-full hover:bg-blue-600 material-symbols-outlined">visibility</button>
+                        </td>
+                    </tr>
+
+                    <tr class="bg-white border-b border-b-gray-200 rounded-xl ">
+                        <td class="px-4 py-2 text-left">
+                            <button
+                                class="border border-[#ff00ff] text-[#ff00ff] rounded-full px-2 text-xs font-medium hover:bg-[#ff00ff] hover:text-white transition">TCK-0001</button>
+                        </td>
+                        <td class="px-4 py-2 text-left">São Paulo</td>
+                        <td class="px-4 py-2 text-left">Miami</td>
+                        <td class="px-4 py-2 text-left">
+                            <span class="bg-[#1a71f8] text-white text-xs px-3 py-1 rounded-full flex w-28">Em análise</span>
+                        </td>
+                        <td class="px-4 py-2 text-left">Hoje 10:05</td>
+
+                        
+                        <td class="px-4 py-2 flex justify-center gap-2">
+                            
+                            <button
+                                class="bg-blue-500 text-white p-1 rounded-full hover:bg-blue-600 material-symbols-outlined">visibility</button>
+                        </td>
+                    </tr>
+
+                    <tr class="bg-white border-b border-b-gray-200 rounded-xl ">
+                        <td class="px-4 py-2 text-left">
+                            <button
+                                class="border border-[#ff00ff] text-[#ff00ff] rounded-full px-2 text-xs font-medium hover:bg-[#ff00ff] hover:text-white transition">TCK-0001</button>
+                        </td>
+                        <td class="px-4 py-2 text-left">São Paulo</td>
+                        <td class="px-4 py-2 text-left">Miami</td>
+                        <td class="px-4 py-2 text-left">
+                            <span class="bg-[#1cbd13] text-white text-xs px-3 py-1 rounded-full flex w-28">Resolvido</span>
+                        </td>
+                        <td class="px-4 py-2 text-left">Hoje 10:05</td>
+                        <td class="px-4 py-2 flex justify-center gap-2">
+                            
+                            <button
+                                class="bg-blue-500 text-white p-1 rounded-full hover:bg-blue-600 material-symbols-outlined">visibility</button>
+                        </td>
+                    </tr>
+
+                    <tr class="bg-white border-b border-b-gray-200 rounded-xl ">
+                        <td class="px-4 py-2 text-left">
+                            <button
+                                class="border border-[#ff00ff] text-[#ff00ff] rounded-full px-2 text-xs font-medium hover:bg-[#ff00ff] hover:text-white transition">TCK-0001</button>
+                        </td>
+                        <td class="px-4 py-2 text-left">São Paulo</td>
+                        <td class="px-4 py-2 text-left">Miami</td>
+                        <td class="px-4 py-2 text-left">
+                            <span class="bg-[#e40502] text-white text-xs px-3 py-1 rounded-full flex w-28">Não Resolvido</span>
+                        </td>
+                        <td class="px-4 py-2 text-left">Hoje 10:05</td>
+                        <td class="px-4 py-2 flex justify-center gap-2">
+                            
+                            <button
+                                class="bg-blue-500 text-white p-1 rounded-full hover:bg-blue-600 material-symbols-outlined">visibility</button>
+                        </td>
+                    </tr>
+
+                    <tr class="bg-white border-b-2 border-b-[#4b0082] rounded-xl ">
+                        <td class="px-4 py-2 text-left">
+                            <button
+                                class="border border-[#ff00ff] text-[#ff00ff] rounded-full px-2 text-xs font-medium hover:bg-[#ff00ff] hover:text-white transition">TCK-0001</button>
+                        </td>
+                        <td class="px-4 py-2 text-left">São Paulo</td>
+                        <td class="px-4 py-2 text-left">Miami</td>
+                        <td class="px-4 py-2 text-left">
+                            <span class="bg-[#1a71f8] text-white text-xs px-3 py-1 rounded-full flex w-28">Em análise</span>
+                        </td>
+                        <td class="px-4 py-2 text-left">Hoje 10:05</td>
+                        <td class="px-4 py-2 flex justify-center gap-2">
+                            
+                            <button
+                                class="bg-blue-500 text-white p-1 rounded-full hover:bg-blue-600 material-symbols-outlined">visibility</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Paginação -->
+        <div class="flex justify-center mt-6">
+            <div class="flex items-center gap-2">
+                <button class="px-[.55rem] py-1 rounded-[20px] text-gray-600 hover:bg-gray-100">ᐸ</button>
+                <button
+                    class="px-[.7rem] py-1 rounded-[20px] border border-gray-300 text-gray-600 hover:bg-gray-100">1</button>
+                <button
+                    class="px-[.7rem] py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">2</button>
+                <button class="px-[.7rem] py-1 rounded-[20px] bg-[#be1384] text-white font-semibold">3</button>
+                <button
+                    class="px-[.7rem] py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">4</button>
+                <button
+                    class="px-[.7rem] py-1 rounded-full border border-gray-300 text-gray-600 hover:bg-gray-100">5</button>
+                <button class="px-[.55rem] py-1 rounded-[20px] text-gray-600 hover:bg-gray-100">ᐳ</button>
+            </div> 
+        </div>
+    </div>
+
+    <!-- Ícones do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</body>
+
+</html>

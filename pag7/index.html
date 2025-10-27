@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados da Empresa</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap');
+
+        .lexend {
+            font-family: "Lexend", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center lexend">
+    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 w-[90%] max-w-5xl">
+        <h2 class="text-lg font-semibold text-gray-600 mb-6">Dados</h2>
+
+        <div class="flex flex-wrap gap-6 items-end">
+            <!-- Campo Nome da empresa -->
+            <div class="flex flex-col flex-1 min-w-[250px]">
+                <label class="text-sm font-medium text-gray-600 mb-2">Nome da empresa</label>
+                <input type="text" placeholder="Empresa Exemplo LTDA"
+                    class="border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400">
+            </div>
+
+            <!-- Campo Notificações -->
+            <div class="flex flex-col flex-1 min-w-[250px]">
+                <label class="text-sm font-medium text-gray-600 mb-2">Notificações</label>
+                <select
+                    class="border border-gray-300 rounded-full px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-green-400">
+                    <option>E-mail</option>
+                    <option>SMS</option>
+                    <option>Push</option>
+                </select>
+            </div>
+
+
+
+        </div>
+        <div class="flex justify-end">
+            <button
+                class="bg-lime-500 hover:bg-lime-600 text-white font-semibold rounded-full px-8 py-2 transition-colors duration-200 gap-2 mt-6">
+                SALVAR
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
